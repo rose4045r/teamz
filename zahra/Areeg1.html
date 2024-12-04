@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>واجهة أريج نوري</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da; /* لون زهري فاتح */
+            text-align: center;
+            color: #333;
+        }
+        #navbar {
+            margin: 20px 0;
+        }
+        #navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        #navbar a:hover {
+            background-color: #ddd;
+        }
+        #content {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            display: none;
+            margin-top: 20px;
+        }
+        #profile {
+            display: block;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        .image-gallery img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="#profile" onclick="showSection('profile')"><i class="fas fa-user"></i> عني</a>
+    <a href="#photos" onclick="showSection('photos')"><i class="fas fa-folder"></i> صوري</a>
+    <a href="#contact" onclick="showSection('contact')"><i class="fas fa-envelope"></i> اتصل بي</a>
+    <a href="https://www.instagram.com/areeg_nure?igsh=MTdwd3k3YmR0cm1pOA== target="_blank"><i class="fab fa-instagram"></i> إنستغرام</a>
+</div>
+
+<div id="content">
+    <div id="profile" class="section">
+        <img src="areeg-photo.jpg" alt="صورة شخصية" class="profile-pic">
+        <h1>أريج نوري سالم</h1>
+        <p>طالبة في الجامعة المستنصرية / كلية العلوم - علوم الحاسوب، محبة للتصوير.</p>
+    </div>
+
+    <div id="photos" class="section">
+        <h2>بعض من صوري</h2>
+        <div class="image-gallery">
+            <img src="aa.jpg" alt="aa">
+            <img src="bb.jpg" alt="bb">
+            <img src="cc.jpg" alt="cc">
+			 <img src="dd.jpg" alt="dd">
+		 <img src="jj.jpg" alt="jj">
+		  <img src="ff.jpg" alt="ff">
+		   <img src="nn.jpg" alt="nn">
+		    <img src="ee.jpg" alt="ee">
+			 <img src="aaa.jpg" alt="aaa">
+			  <img src="bbb.jpg" alt="bbb">
+			   <img src="ccc.jpg" alt="ccc">
+			    <img src="ddd.jpg" alt="ddd">
+				 <img src="eee.jpg" alt="eee">
+				  <img src="kkk.jpg" alt="kkk">
+				   <img src="mmm.jpg" alt="mmm">
+				    <img src="fff.jpg" alt="fff">
+					 <img src="xxx.jpg" alt="xxx">
+					  <img src="nnn.jpg" alt="nnn">
+					  
+					  <img src="mg.jpg" alt="mg">
+					  <img src="t.jpg" alt="t">
+					  
+	
+            <!-- يمكنك إضافة المزيد من الصور هنا -->
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>اتصل بي</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="اسمك" required>
+            <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+            <input type="text" name="subject" placeholder="الموضوع" required>
+            <textarea name="message" placeholder="رسالتك" rows="4" required></textarea>
+            <input type="submit" value="أرسل الرسالة">
+        </form>
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
